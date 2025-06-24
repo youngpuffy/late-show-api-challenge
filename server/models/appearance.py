@@ -5,3 +5,5 @@ class Appearance(db.Model):
     rating = db.Column(db.Integer, nullable=False)
     guest_id = db.Column(db.Integer, db.ForeignKey('guest.id'), nullable=False)
     episode_id = db.Column(db.Integer, db.ForeignKey('episode.id'), nullable=False)
+
+    

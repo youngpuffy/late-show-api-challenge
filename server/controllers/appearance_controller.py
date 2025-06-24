@@ -11,7 +11,7 @@ def create_appearance():
     data = request.get_json()
     rating = data.get('rating')
     if not (1<= rating <=5):
-        return jsonify(message='Racing must be between 1 and 5'), 400
+        return jsonify(message='Rating must be between 1 and 5'), 400
     
     appearance = Appearance(
         rating = rating,
@@ -20,4 +20,4 @@ def create_appearance():
     )
     db.session.add(appearance)
     db.session.commit()
-    return jsonify(message='Appearnce created', id=appearance.id), 201
+    return jsonify(message='Appearance created', id=appearance.id), 201
