@@ -8,6 +8,9 @@ git clone git@github.com:youngpuffy/late-show-api-challenge.git
 cd late-show-api-challenge
 
 2. Install PostgresSQL
+sudo -i -u postgres
+psql -U postgres -d late_show_db
+sudo -i -u postgres
 3. Create the Database
 -access PostgresSQL via terminal or pgAdmin and run
     CREATE DATABASE late_show_db;
